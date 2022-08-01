@@ -21,8 +21,8 @@ def convert_section(
 
     # Convert block coordinates
     r,region_x,region_z,mca = filename.split(".")
-    x = (-int(region_x) << 5) | (31-chunk_x) # X axis is flipped
-    z = ( int(region_z) << 5) | (chunk_z)
+    x = ( int(region_x) << 5) | (chunk_x)
+    z = (-int(region_z) << 5) | (31-chunk_z) # Z axis is flipped
     converted_section["pos"] = (x,section_y,z)
 
     # Loop on all blocks
@@ -32,8 +32,8 @@ def convert_section(
 
     for block in chunk.stream_blocks(0,section_y,True):
         y = count // 256
-        z = count // 16 % 16
-        x = 15 - ( count % 16 )
+        z = 15 - (count // 16 % 16) # Z axis is flipped
+        x = ( count % 16 )
         count += 1
         itemstring,param1,param2 = block_conversion.convert_block(block)
         if itemstring not in converted_itemstring:
