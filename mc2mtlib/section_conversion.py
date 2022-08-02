@@ -23,13 +23,12 @@ def convert_section(
     r,region_x,region_z,mca = filename.split(".")
     x = ( int(region_x) << 5) | (chunk_x)
     z = (-int(region_z) << 5) | (31-chunk_z) # Z axis is flipped
-    converted_section["pos"] = (x,section_y,z)
+    converted_section["pos"] = (x,section_y-4,z) # shift world down 64 blocks (so sea level is around y=0 in minetest)
 
     # Loop on all blocks
     count = 0
     section = chunk.get_section(section_y)
     if not section: return
-
     for block in chunk.stream_blocks(0,section_y,True):
         y = count // 256
         z = 15 - (count // 16 % 16) # Z axis is flipped

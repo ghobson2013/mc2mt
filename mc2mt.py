@@ -65,7 +65,7 @@ if __name__ == '__main__':
                     )
                     if not converted: continue
                     world.insert(converted)
-                print(f"Map Blocks saved: {world.saved_map_block}",end="\r")
+            print(f"Map Blocks saved: {world.saved_map_block}",end="\r")
     # End
     world.save()
     if world.saved_map_block:
