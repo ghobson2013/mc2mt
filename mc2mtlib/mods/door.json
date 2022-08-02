@@ -5,11 +5,11 @@
     "enabled" : true,
     "priority" : 500,
     "table" : {
-        "":["doors:gate_wood_closed",15,"@facing2facedir"],
-        "":["doors:gate_wood_open",15,"@facing2facedir"],
+        "":["mcl_fences:fence_gate",15,"@facing2facedir"],
+        "":["mcl_fences:fence_gate",15,"@facing2facedir"],
         "":["doors:hidden",15,"@facing2facedir"],
         "?door":["@door2ab",15,"@door2facedir"],
-        "iron_trapdoor":["doors:trapdoor_steel_open",15,"@facing2facedir"],
-        "?trapdoor":["doors:trapdoor_open",15,"@facing2facedir"]
+        "iron_trapdoor":["mcl_doors:iron_trapdoor",15,"@facing2facedir"],
+        "?trapdoor":["mcl_doors:trapdoor",15,"@facing2facedir"]
     }
 }
