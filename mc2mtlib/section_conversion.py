@@ -27,12 +27,38 @@ def convert_section(
 
     # Loop on all blocks
     count = 0
+    sign=0
     section = chunk.get_section(section_y)
     if not section: return
     for block in chunk.stream_blocks(0,section_y,True):
+
+        if( "sign" in block.id ):
+          print("BLOCK regian X:%d Z:%d Section Y:%d Chunk X:%d Z:%d Count:%d"%(int(region_x),int(region_z),section_y, chunk.x, chunk.z, count));
+
+          #print(chunk.tile_entities);
+          #for tag in chunk.tile_entities.tags:
+          #    for innertag in tag.tags:
+          #      print(innertag.tag_info())
+          print(block);
+          print(block.id) # air
+          print(block.properties) # {}
+          #print(count);
+          
+          myy = (section_y*16)+(count // 256)
+          mysection = (count // 256) * 256
+          myz = (chunk.z*16)+((count - mysection) // 16)  
+          myx = (chunk.x*16)+(count - mysection - (((count - mysection) // 16) * 16))
+
+          print("WORLD COORDINATES X:%d Y:%d Z:%d "%(myx,myy,myz))
+          #test = chunk.get_tile_entity(myx,myy, myz)
+          #print(test)
+          sign = sign + 1
+
         y = count // 256
         z = 15 - (count // 16 % 16) # Z axis is flipped
         x = ( count % 16 )
+
+
         count += 1
         itemstring,param1,param2 = block_conversion.convert_block(block)
         if itemstring not in converted_itemstring:
@@ -44,5 +70,8 @@ def convert_section(
         converted_section["param1"][coord(z,y,x)] = param1
         converted_section["param2"][coord(z,y,x)] = param2
 
+    if(sign > 0):
+      print("SIGNS: Found %d signs in chunk X:%d Z:%d"%(sign,chunk.x,chunk.z));
+    
     # End
     return converted_section
