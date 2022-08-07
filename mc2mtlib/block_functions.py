@@ -93,7 +93,7 @@ def carpetFacing2facedir(block):
 # Wallmounted
 def facing2wallmounted(block):
     return {
-        "north":4,"east":2,"south":5,"west":3
+        "north":5,"east":3,"south":4,"west":2
     }.get(prop(block,"facing"),0)
 
 # Stairs
