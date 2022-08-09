@@ -6,4 +6,6 @@ from . import block_conversion
 from . import section_conversion
 from . import serialize
 from . import itemstack
+from . import tile_entities
+
 parse_args = argument_parser.parser.parse_args
