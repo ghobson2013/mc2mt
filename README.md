@@ -1,5 +1,15 @@
 # mc2mt
 Convert maps from Minecraft to Minetest
+This is a fork of Listia's excelent work.
+
+## Bug fixes 
+
+- fixed sign rotation issue when wallmounted.
+- replaced grass with tall grass instead of grass_path
+- replaced kelp with water ( as it made a mess under water )
+- added ability to migrate sign text
+- adjusted m2mt.py to work with python3 ( on ubuntu 20 )
+- added missing blocks for MC 1.16.5
 
 ## Dependencies
 
