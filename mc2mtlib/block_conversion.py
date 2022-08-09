@@ -9,6 +9,9 @@ mods_available = {}
 mods_priority = []
 mods_enabled = {}
 
+def coord(z,y,x):
+    return (z<<8) | (y<<4) | x
+
 def str_mod(name):
     author = mods_available[name]['author']
     download = mods_available[name]['download']
