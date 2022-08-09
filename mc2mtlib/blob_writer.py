@@ -1,4 +1,7 @@
 import io,zlib
+from .serialize import *
+from .itemstack import *
+from .block_conversion import coord
 
 def write_blob(converted_section):
     writeU8 = lambda out,u8: out.write(bytes([u8&0xff]))
@@ -21,9 +24,22 @@ def write_blob(converted_section):
     node_data.close()
     
     # Nodemeta  
+    meta = converted_section["meta"]
+    
     node_metadata = io.BytesIO()
     writeU8(node_metadata, 1)  # Version
-    writeU16(node_metadata, 0) # length
+    writeU16(node_metadata, len(meta)) # length
+    if meta != {}:
+      for pos, data in meta.items():
+        print("adding meta for POS:%s  DATA:%s "%(repr(pos),data));
+        writeU16(node_metadata, coord(pos[0],pos[1],pos[2]))
+        writeU32(node_metadata, len(data[0]))
+        for name, val in data[0].items():
+          print("--> %s: %s"%(name,str(val)));
+          writeString(node_metadata, name)
+          writeLongString(node_metadata, str(val))
+        print("serializing inventory %s"%data[1]);
+        serialize_inv(node_metadata, data[1])
     out.write(zlib.compress(node_metadata.getvalue()))
     node_metadata.close()
     
