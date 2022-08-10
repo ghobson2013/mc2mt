@@ -61,7 +61,7 @@ def convert_section(
           f = te_convert.get(block.name().lower(), lambda arg: (None))
           te_metadata = f(a_tile_entity)
           if te_metadata == None:
-              print("No conversion found for %s"%block.name())
+              print("ERROR: No conversion found for %s"%block.name())
           else:
               print("block meta is %s"%repr(te_metadata))
           tile_cnt += 1

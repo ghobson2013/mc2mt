@@ -93,7 +93,7 @@ def convert_block(block):
     if unknown_as_air: converted = ("air",15,0)
     else: converted = (f"mc2mt:{block.id}",0,0)
     converted_blocks[str_block(block)] = converted
-    if report_unknown_blocks: print_block("UnknownBlock",block)
+    if report_unknown_blocks: print_block("ERROR: UnknownBlock",block)
     return converted
 
 def print_block(prefix,block):
