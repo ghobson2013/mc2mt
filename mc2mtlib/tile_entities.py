@@ -95,7 +95,21 @@ def convert_pot(te):
         print('Unknown flower pot type: ' + c)
         return None
 
-te_convert = {"minecraft:sign": convert_sign,
+te_convert = {"minecraft:birch_sign": convert_sign,
+              "minecraft:oak_sign": convert_sign,
+              "minecraft:crimson_sign": convert_sign,
+              "minecraft:crimson_wall_sign": convert_sign,
+              "minecraft:spruce_sign": convert_sign,
+              "minecraft:spruce_wall_sign": convert_sign,
+              "minecraft:warped_wall_sign": convert_sign,
+              "minecraft:warped_sign": convert_sign,
+              "minecraft:jungle_sign": convert_sign,
+              "minecraft:jungle_wall_sign": convert_sign,
+              "minecraft:acacia_sign": convert_sign,
+              "minecraft:acacia_wall_sign": convert_sign,
+              "minecraft:dark_oak_sign": convert_sign,
+              "minecraft:dark_oak_wall_sign": convert_sign,
+              "minecraft:sign": convert_sign,
               "minecraft:oak_wall_sign": convert_sign,
               "minecraft:birch_wall_sign": convert_sign,
               "minecraft:flower_pot": convert_pot}
