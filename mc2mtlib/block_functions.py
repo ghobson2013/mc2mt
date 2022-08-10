@@ -61,8 +61,8 @@ def rotation2facedir(block):
     }.get(prop(block,"rotation"),0)
 
 def cardinal2facedir(block):
-    if prop(block,'north')=='true': return 0
-    if prop(block,'south')=='true': return 1
+    if prop(block,'north')=='true': return 1
+    if prop(block,'south')=='true': return 0
     if prop(block,'east')=='true': return 2
     if prop(block,'west')=='true': return 3
     return 0
