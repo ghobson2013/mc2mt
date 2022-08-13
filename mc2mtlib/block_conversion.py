@@ -73,10 +73,12 @@ def get_from_table(table,block):
         raise e
 
     # special conversion for slabs
-    fpos = {
-        "bottom":"","top":"_top","double":""
-    }.get(prop(block,"type"),"")
+    fpos = { "bottom":"","top":"_top","double":"" }.get(prop(block,"type"),"")
     param0 = param0+fpos; 
+
+    # special conversion for stairs
+    fpos = { "inner_left" : "_inner", "inner_right": "_inner", "outer_left":"_outer", "outer_right": "_outer" }.get(prop(block,"shape"),"")
+    param0 = param0+fpos;
 
     return param0,param1,param2
 

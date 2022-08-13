@@ -106,7 +106,7 @@ def facing2wallmounted(block):
         }.get(prop(block,"facing"),0)
     else:
         return {
-            "north":5,"east":1,"south":4,"west":3
+            "north":5,"east":3,"south":4,"west":2
         }.get(prop(block,"facing"),0)
 
 # lever  MT doesnt support floor lever
@@ -123,18 +123,35 @@ def lever2wallmounted(block):
     
 # Stairs
 def stair2facedir(block):
-    if prop(block,"shape") in ["straight","inner_left","outer_left"]:
-        return {
-            "north":0,"east":1,"south":4,"west":3
-        }.get(prop(block,"facing"),0) + {
-            "top":20,"bottom":0
-        }.get(prop(block,"half"),0)
-    else:
-        return {
-            "north":3,"east":2,"south":4,"west":0
-        }.get(prop(block,"facing"),0) + {
-            "top":20,"bottom":0
-        }.get(prop(block,"half"),0)
+    if prop(block,"shape") == "straight":
+        if prop(block,"half") == "bottom" :
+            return { "north":0,"east":1,"south":2,"west":3 }.get(prop(block,"facing"),0)
+        else:        
+            return { "north":20,"east":23,"south":22,"west":21 }.get(prop(block,"facing"),20)
+    
+    if prop(block,"shape") == "outer_right":
+        if prop(block,"half") == "bottom" :
+            return { "north":2,"east":1,"south":0,"west":3 }.get(prop(block,"facing"),0)
+        else:
+            return { "north":20,"east":23,"south":22,"west":21 }.get(prop(block,"facing"),20)
+    
+    if prop(block,"shape") in ["outer_left"]:
+        if prop(block,"half") == "bottom" :
+            return { "north":0,"east":1,"south":2,"west":3 }.get(prop(block,"facing"),0)
+        else:
+            return { "north":21,"east":20,"south":23,"west":22 }.get(prop(block,"facing"),20)
+    
+    if prop(block,"shape") == "inner_right":
+        if prop(block,"half") == "bottom" :
+            return { "north":1,"east":2,"south":3,"west":0 }.get(prop(block,"facing"),0)
+        else:
+            return { "north":20,"east":23,"south":22,"west":21 }.get(prop(block,"facing"),20)
+    else: # Inner Left 
+        if prop(block,"half") == "bottom" :
+            return { "north":0,"east":1,"south":2,"west":3 }.get(prop(block,"facing"),0)
+        else:
+            return { "north":21,"east":20,"south":23,"west":22 }.get(prop(block,"facing"),20)
+
 
 def shape2stair(block):
     return "stairs:stair" + {
