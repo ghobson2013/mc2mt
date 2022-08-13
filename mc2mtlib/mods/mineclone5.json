@@ -186,7 +186,7 @@
     "crafting_table": ["mcl_crafting_table:crafting_table",0,0],
     "farmland": ["mcl_farming:soil",0,0],
     "furnace": ["mcl_furnaces:furnace",0,0],
-    "ladder": ["mcl_core:ladder",0,0],
+    "ladder": ["mcl_core:ladder",0,"@facing2wallmounted"],
     "rail": ["mcl_minecarts:rail",0,0],
     "cobblestone_stairs": ["mcl_stairs:stair_cobble",0,"@stair2facedir"],
     "lever": ["mesecons_walllever:wall_lever_off",0,"@lever2wallmounted"],
