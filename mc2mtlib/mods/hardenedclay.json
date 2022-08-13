@@ -22,7 +22,8 @@
         "light_glazed_blue_terracotta":["hardenedclay:hardened_clay_light_blue",0,0],
         "light_glazed_gray_terracotta":["hardenedclay:hardened_clay_light_gray",0,0],
         "light_gray_terracotta":["hardenedclay:hardened_clay_light_gray",0,0],
-        "lime_glazed_terracotta":["hardenedclay:hardened_clay_lime",0,0],
+        "light_gray_glazed_terracotta":["hardenedclay:hardened_clay_light_gray",0,0],
+	"lime_glazed_terracotta":["hardenedclay:hardened_clay_lime",0,0],
         "lime_terracotta":["hardenedclay:hardened_clay_lime",0,0],
         "magenta_glazed_terracotta":["hardenedclay:hardened_clay_magenta",0,0],
         "magenta_terracotta":["hardenedclay:hardened_clay_magenta",0,0],
@@ -37,6 +38,7 @@
         "white_glazed_terracotta":["hardenedclay:hardened_clay_white",0,0],
         "white_terracotta":["hardenedclay:hardened_clay_white",0,0],
         "yellow_glazed_terracotta":["hardenedclay:hardened_clay_yellow",0,0],
-        "yellow_terracotta":["hardenedclay:hardened_clay_yellow",0,0]
+        "yellow_terracotta":["hardenedclay:hardened_clay_yellow",0,0],
+        "terracotta":["hardenedclay:hardened_clay_brown",0,0]
     }
 }

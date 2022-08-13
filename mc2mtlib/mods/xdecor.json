@@ -3,7 +3,7 @@
     "author" : "jonajames",
     "description": "Various decorative blocks",
     "download" : "https://github.com/minetest-mods/xdecor/archive/master.zip",
-    "enabled" : false,
+    "enabled" : true,
     "priority" : 10,
     "table" : {
         "anvil" :  ["xdecor:workbench",0,"@facing2facedir"],
