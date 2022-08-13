@@ -71,6 +71,13 @@ def get_from_table(table,block):
     except Exception as e:
         print_block("ERROR",block)
         raise e
+
+    # special conversion for slabs
+    fpos = {
+        "bottom":"","top":"_top","double":""
+    }.get(prop(block,"type"),"")
+    param0 = param0+fpos; 
+
     return param0,param1,param2
 
 def convert_block(block):
@@ -78,7 +85,7 @@ def convert_block(block):
     if block.id == "air": return ("air",15,0)
     if str_block(block) in converted_blocks:
         return converted_blocks[str_block(block)]
-
+    
     # Get conversion from mod
     for priority,mod_name in mods_priority:
         if not mods_enabled[mod_name]: continue
@@ -86,7 +93,7 @@ def convert_block(block):
         converted = get_from_table(mod_table,block)
         if converted:
             converted_blocks[str_block(block)] = converted
-            if report_known_blocks: print_block("ConvertedBlock",block)
+            if report_known_blocks: print("ConvertedBlock: "+repr(converted))
             return converted
 
     # Unknown block
