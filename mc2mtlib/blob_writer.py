@@ -4,9 +4,9 @@ from .itemstack import *
 from .block_conversion import coord
 
 def write_blob(converted_section):
-    writeU8 = lambda out,u8: out.write(bytes([u8&0xff]))
-    writeU16 = lambda out,u16: out.write(bytes([(u16>>8)&0xff,u16&0xff]))
-    writeU32 = lambda out,u32: out.write(bytes([(u32>>24)&0xff,(u32>>16)&0xff,(u32>>8)&0xff,u32&0xff]))
+    #writeU8 = lambda out,u8: out.write(bytes([u8&0xff]))
+    #writeU16 = lambda out,u16: out.write(bytes([(u16>>8)&0xff,u16&0xff]))
+    #writeU32 = lambda out,u32: out.write(bytes([(u32>>24)&0xff,(u32>>16)&0xff,(u32>>8)&0xff,u32&0xff]))
 
     out = io.BytesIO()
     writeU8(out, 27)      # Version 27
@@ -31,14 +31,14 @@ def write_blob(converted_section):
     writeU16(node_metadata, len(meta)) # length
     if meta != {}:
       for pos, data in meta.items():
-        print("adding meta for POS:%s  DATA:%s "%(repr(pos),data));
+        #print("adding meta for POS:%s  DATA:%s "%(repr(pos),data));
         writeU16(node_metadata, coord(pos[0],pos[1],pos[2]))
         writeU32(node_metadata, len(data[0]))
         for name, val in data[0].items():
-          print("--> %s: %s"%(name,str(val)));
+          #print("--> %s: %s"%(name,str(val)));
           writeString(node_metadata, name)
           writeLongString(node_metadata, str(val))
-        print("serializing inventory %s"%data[1]);
+        #print("serializing inventory %s"%data[1]);
         serialize_inv(node_metadata, data[1])
     out.write(zlib.compress(node_metadata.getvalue()))
     node_metadata.close()
