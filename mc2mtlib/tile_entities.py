@@ -19,7 +19,7 @@ def convert_chest(te):
 
     for item in items:
        iid = item['id'].value
-       print(item)
+       #print(item)
        
 
     return (fields, inventory)
@@ -37,7 +37,7 @@ def escape(s):
         else:
             s2 += c
     return s2
-
+    
 def convert_sign(te):
     t = ""
     for i in range(1, 5):
@@ -51,6 +51,7 @@ def convert_sign(te):
     t = t.strip()
     fields = {"infotext": "sign",
               "text": t,
+              "widefont": "1",
               "formspec": "size[6,4]textarea[0,-0.3;6.5,3;text;;${text}]button_exit[2,3.4;2,1;ok;Write]"}
 
     # TODO PLAY WITH BETTER FROMSPEC
