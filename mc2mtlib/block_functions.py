@@ -17,9 +17,9 @@ materials = {
     "nether_brick" : "desert_stonebrick",
     "oak" : "wood",
     "petrified_oak" : "wood",
-    "polished_andesite" : "stone_block",
-    "polished_diorite" : "silver_sandstone",
-    "polished_granite" : "desert_stone_block",
+    "polished_andesite" : "stone",
+    "polished_diorite" : "stone",
+    "polished_granite" : "stone",
     "prismarine" : "ice",
     "prismarine_brick" : "ice",
     "purpur" : "goldblock",
@@ -60,6 +60,11 @@ def rotation2facedir(block):
         "11":4,"12":4,"13":4,"14":4,
     }.get(prop(block,"rotation"),0)
 
+def rail2shape(block):
+    return {
+        "east_west": 2, "north_south": 1, "ascending_east": 3, "ascending_south": 4
+    }.get(prop(block,"shape"),0)
+
 def cardinal2facedir(block):
     if prop(block,'north')=='true': return 1
     if prop(block,'south')=='true': return 0
@@ -76,14 +81,17 @@ def cardinalVine2facedir(block):
     return 0
 
 def type2facedir(block):
-    return {
-        "bottom":0,"top":20,"double":0
-    }.get(prop(block,"type"),0)
+    atype = {
+        "bottom":0,"top":22,"double":0
+    }.get(prop(block,"type"),0)  
+    #print ("BLOCK %s %s --> %d "%(block,repr(block.properties),atype));
+    return atype
 
 def facing2facedir(block):
     return {
         "north":2,"east":3,"south":0,"west":1,"up":4,"down":8
     }.get(prop(block,"facing"),0)
+   
 
 def carpetFacing2facedir(block):
     return {
@@ -92,21 +100,38 @@ def carpetFacing2facedir(block):
 
 # Wallmounted
 def facing2wallmounted(block):
-    return {
-        "north":5,"east":3,"south":4,"west":2
-    }.get(prop(block,"facing"),0)
+    if prop(block,"up") in ["true"]:
+        return {
+            "north":5,"east":3,"south":4,"west":2
+        }.get(prop(block,"facing"),0)
+    else:
+        return {
+            "north":5,"east":1,"south":4,"west":3
+        }.get(prop(block,"facing"),0)
 
+# lever  MT doesnt support floor lever
+def lever2wallmounted(block):
+    if prop(block,"face") in ["wall"]:
+        return {
+            "north":2,"east":3,"south":0,"west":1
+        }.get(prop(block,"facing"),0)
+    else:
+        return {
+            "north":0,"east":1,"south":2,"west":3
+        }.get(prop(block,"facing"),0)
+
+    
 # Stairs
 def stair2facedir(block):
     if prop(block,"shape") in ["straight","inner_left","outer_left"]:
         return {
-            "north":4,"east":3,"south":0,"west":1
+            "north":0,"east":1,"south":4,"west":3
         }.get(prop(block,"facing"),0) + {
             "top":20,"bottom":0
         }.get(prop(block,"half"),0)
     else:
         return {
-            "north":0,"east":4,"south":1,"west":2
+            "north":3,"east":2,"south":4,"west":0
         }.get(prop(block,"facing"),0) + {
             "top":20,"bottom":0
         }.get(prop(block,"half"),0)
@@ -137,7 +162,7 @@ def door2ab(block):
 
 def door2facedir(block):
     return ( {
-        "north":2,"east":3,"south":0,"west":1
+        "north":0,"east":1,"south":2,"west":3
     }.get(prop(block,"facing"),0) + {
         "true":0,"false":1
     }.get(prop(block,"open"),0) * {
