@@ -1,0 +1,26 @@
+{
+    "name" : "abriglass",
+    "author" : "shara",
+    "description": "stained glass",
+    "download" : "https://github.com/Ezhh/abriglass/archive/master.zip",
+    "enabled" : true,
+    "priority" : 10,
+    "table" : {
+	"white_stained_glass": ["abriglass:stained_glass_frosted",0,"@cardinal2facedir"],
+    	"orange_stained_glass": ["abriglass:stained_glass_orange",0,"@cardinal2facedir"],
+    	"magenta_stained_glass": ["abriglass:stained_glass_magenta",0,"@cardinal2facedir"],
+    	"light_blue_stained_glass": ["abriglass:stained_glass_blue",0,"@cardinal2facedir"],
+    	"yellow_stained_glass": ["abriglass:stained_glass_yellow",0,"@cardinal2facedir"],
+    	"lime_stained_glass": ["abriglass:stained_glass_green",0,"@cardinal2facedir"],
+    	"pink_stained_glass": ["abriglass:stained_glass_purple",0,"@cardinal2facedir"],
+    	"gray_stained_glass": ["abriglass:stained_glass_frosted",0,"@cardinal2facedir"],
+    	"light_gray_stained_glass": ["abriglass:stained_glass_frosted",0,"@cardinal2facedir"],
+    	"cyan_stained_glass": ["abriglass:stained_glass_cyan",0,"@cardinal2facedir"],
+    	"purple_stained_glass": ["abriglass:stained_glass_purple",0,"@cardinal2facedir"],
+    	"blue_stained_glass": ["abriglass:stained_glass_blue",0,"@cardinal2facedir"],
+    	"brown_stained_glass": ["abriglass:stained_glass_black",0,"@cardinal2facedir"],
+    	"green_stained_glass": ["abriglass:stained_glass_green",0,"@cardinal2facedir"],
+    	"red_stained_glass": ["abriglass:stained_glass_red",0,"@cardinal2facedir"],
+    	"black_stained_glass": ["abriglass:stained_glass_black",0,"@cardinal2facedir"]
+    }
+}

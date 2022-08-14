@@ -1,0 +1,31 @@
+{
+    "name" : "moreblocks",
+    "author" : "",
+    "description": "moreblocks",
+    "download" : "",
+    "enabled" : true,
+    "priority" : 2,
+    "table" : {
+    "purpur_slab": ["moreblocks:slab_sandstone",0,"@type2facedir"],
+    "prismarine_slab": ["ethereal:slab_yellow_wood",0,"@type2facedir"],
+    "prismarine_brick_slab": ["ethereal:slab_yellow_wood",0,"@type2facedir"],
+    "dark_prismarine_slab": ["ethereal:slab_yellow_wood",0,"@type2facedir"],
+    "smooth_stone_slab": ["moreblocks:slab_stone_tile",0,"@type2facedir"],
+    "polished_granite_slab": ["moreblocks:slab_grey_bricks",0,"@type2facedir"],
+    "smooth_red_sandstone_slab": ["moreblocks:slab_sandstone",0,"@type2facedir"],
+    "mossy_stone_brick_slab": ["moreblocks:slab_mossycobble",0,"@type2facedir"],
+    "polished_diorite_slab": ["moreblocks:slab_stone_tile",0,"@type2facedir"],
+    "mossy_cobblestone_slab": ["moreblocks:slab_mossycobble",0,"@type2facedir"],
+    "end_stone_brick_slab": ["moreblocks:slab_stone_bricks",0,"@type2facedir"],
+    "smooth_sandstone_slab": ["moreblocks:slab_sandstone",0,"@type2facedir"],
+    "granite_slab": ["moreblocks:slab_sandstone",0,"@type2facedir"],
+    "andesite_slab": ["moreblocks:slab_stone_tile",0,"@type2facedir"],
+    "polished_andesite_slab": ["moreblocks:slab_stone_tile",0,"@type2facedir"],
+    "diorite_slab": ["moreblocks:slab_grey_bricks",0,"@type2facedir"],
+    "crimson_slab": ["ethereal:slab_frost_wood",0,"@type2facedir"],
+    "warped_slab": ["ethereal:slab_yellow_wood",0,"@type2facedir"],
+    "blackstone_slab": ["moreblocks:slab_obsidian",0,"@type2facedir"],
+    "polished_blackstone_slab": ["moreblocks:slab_obsidian",0,"@type2facedir"],
+    "polished_blackstone_brick_slab": ["moreblocks:slab_obsidian",0,"@type2facedir"]
+    }
+}

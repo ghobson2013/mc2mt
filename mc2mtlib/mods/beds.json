@@ -1,0 +1,22 @@
+{
+    "name" : "beds",
+    "author" : "tenplus",
+    "description": "beds redo",
+    "download" : "https://notabug.org/TenPlus1/beds/archive/master.zip",
+    "enabled" : true,
+    "priority" : 3,
+    "table" : {
+	"bed": ["beds:bed_top",0,0],
+    	"white_bed": ["beds:bed_white_top",0,0],
+     	"blue_bed": ["beds:bed_blue_top",0,0],
+	"black_bed": ["beds:bed_blue_top",0,0],
+	"orange_bed": ["beds:bed_blue_top",0,0],
+	"yellow_bed": ["beds:bed_blue_top",0,0],
+        "magenta_bed": ["beds:bed_blue_top",0,0],
+	"green_bed": ["beds:bed_blue_top",0,0],
+	"light_blue_bed": ["beds:bed_blue_top",0,0],
+    	"red_bed": ["beds:fancy_bed_top",0,0],
+	"fancy_bed": ["beds:fancy_bed_top",0,0],
+    	"pink_bed": ["beds:fancy_bed_pink_top",0,0]
+    }
+}

@@ -3,7 +3,7 @@
     "author" : "jonajames",
     "description": "Buttons, plates and pistons. Block rotation is not yet implemented",
     "download" : "https://github.com/minetest-mods/mesecons/archive/master.zip",
-    "enabled" : false,
+    "enabled" : true,
     "priority" : 20,
     "table" : {
         "acacia_button":["mesecons_button:button_off",0,"@facing2wallmounted"],

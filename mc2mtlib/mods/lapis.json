@@ -1,0 +1,13 @@
+{
+    "name" : "lapis",
+    "author" : "lnu",
+    "description": "lapis",
+    "download" : "https://github.com/minetest-mods/lapis/archive/master.zip",
+    "enabled" : true,
+    "priority" : 10,
+    "table" : {
+        "lapis": ["lapis:lapis",0,0],
+        "lapis_block": ["lapis:lapisblock",0,0],
+	"lapis_ore": ["lapis:stone_with_lapis",0,0]
+    }
+}

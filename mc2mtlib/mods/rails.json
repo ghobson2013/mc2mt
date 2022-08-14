@@ -1,0 +1,14 @@
+{
+    "name" : "rails",
+    "author" : "",
+    "description": "rails",
+    "download" : "",
+    "enabled" : true,
+    "priority" : 2,
+    "table" : {
+    	"powered_rail": ["carts:powerrail",0,0],
+    	"detector_rail": ["boost_cart:detectorrail",0,0],
+    	"rail": ["carts:rail",0,0],
+    	"activator_rail": ["boost_cart:startstoprail",0,0]
+    }
+}

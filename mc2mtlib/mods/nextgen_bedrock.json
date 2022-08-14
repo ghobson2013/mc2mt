@@ -1,0 +1,11 @@
+{
+    "name" : "nextgen_bedrock",
+    "author" : "staminjas",
+    "description": "Bedrock",
+    "download" : "https://github.com/starninjas/nextgen_bedrock/archive/master.zip",
+    "enabled" : true,
+    "priority" : 10,
+    "table" : {
+        "bedrock": ["nextgen_bedrock:bedrock",0,0]
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name" : "farming",
+    "author" : "tenplus",
+    "description": "farming redo",
+    "download" : "https://notabug.org/TenPlus1/farming/archive/master.zip",
+    "enabled" : true,
+    "priority" : 10,
+    "table" : {
+	"cornflower":["farming:wheat_6",0,0],
+	"wheat" : ["farming:wheat_6",0,0],
+    	"pumpkin": ["farming:pumpkin_8",0,0],
+    	"jack_o_lantern": ["farming:jackolantern",0,0],
+    	"melon": ["farming:melon_8",0,0],
+    	"hay_block": ["farming:hemp_block",0,0],
+    	"carrot": ["farming:carrot",0,0],
+    	"potato": ["farming:potato",0,0],
+    	"beetroot": ["farming:beetroot",0,0],
+	"sunflower": ["farming:sunflower",0,0]
+    }
+}

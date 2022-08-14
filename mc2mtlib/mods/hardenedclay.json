@@ -3,7 +3,7 @@
     "author" : "jonajames",
     "description": "Colored terracotta",
     "download" : "https://github.com/oOChainLynxOo/hardenedclay/archive/master.zip",
-    "enabled" : false,
+    "enabled" : true,
     "priority" : 10,
     "table" : {
         "black_glazed_terracotta":["hardenedclay:hardened_clay_black",0,0],

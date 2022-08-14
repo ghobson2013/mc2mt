@@ -3,7 +3,7 @@
     "author" : "jonajames",
     "description": "Carpets and banners",
     "download" : "https://github.com/minetest-mods/carpets/archive/master.zip",
-    "enabled" : false,
+    "enabled" : true,
     "priority" : 10,
     "table" : {
         "black_banner":["carpet:wool_black",0,"@rotation2facedir"],

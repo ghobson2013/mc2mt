@@ -1,0 +1,11 @@
+{
+    "name" : "hopper",
+    "author" : "facedeer",
+    "description": "hopper",
+    "download" : "https://github.com/minetest-mods/hopper/archive/master.zip",
+    "enabled" : true,
+    "priority" : 10,
+    "table" : {
+        "hopper": ["hopper:hopper",0,0]
+    }
+}

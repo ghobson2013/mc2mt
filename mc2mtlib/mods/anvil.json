@@ -1,0 +1,11 @@
+{
+    "name" : "anvil",
+    "author" : "facedeer",
+    "description": "anvil",
+    "download" : "https://github.com/minetest-mods/anvil/archive/master.zip",
+    "enabled" : true,
+    "priority" : 2,
+    "table" : {
+	"anvil" :  ["anvil:anvil",0,"@facing2facedir"]
+    }
+}
