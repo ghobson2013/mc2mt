@@ -74,7 +74,7 @@ class MinetestWorld:
                 "minetest.set_mapgen_params({chunksize = 1})",
                 "minetest.set_mapgen_params({mgname = \"singlenode\"})",
                 "minetest.register_on_generated(function(minp, maxp, seed)",
-                "    local vm = minetest.get_voxel_manip(minp, maxp)",
+                "    local vm = minetest.get_mapgen_object('voxelmanip)",
                 "    vm:calc_lighting()",
                 "    vm:update_liquids()",
                 "    vm:write_to_map()",
