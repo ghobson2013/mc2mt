@@ -257,7 +257,7 @@
         "smooth_stone":["default:stone_block",0,0],
         "snow":["default:snow",0,0],
         "snow_block":["default:snowblock",0,0],
-        "soul_sand":["deafult:sand",0,0],
+        "soul_sand":["default:sand",0,0],
         "sponge":["farming:straw",0,0],
         "spruce_fence":["default:fence_pine_wood",0,0],
         "spruce_fence_gate":["doors:gate_pine_wood_closed",0,2],
