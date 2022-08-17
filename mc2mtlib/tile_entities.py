@@ -1,5 +1,6 @@
 import re
 from .itemstack import *
+from .block_conversion import convert_inventory_block
 
 def convert_chest(te):
     formspec = "size[8,9]"+\
@@ -7,7 +8,7 @@ def convert_chest(te):
                "list[current_player;main;0,5;8,4;]"
     fields = {"infotext": "Chest",
               "formspec": formspec}
-    inventory = {"main": (0, [MTItemStack()]*32)}
+
     # Transfer the content of TE inventory into the MT one.
     items = {}
     try:
@@ -16,12 +17,20 @@ def convert_chest(te):
         items = {}
 
     # EXAMPLE [TAG_Compound: {3 Entries}, TAG_Compound: {3 Entries}, TAG_Compound: {3 Entries}]
+    #print(items)
 
+    # Example {TAG_Byte('Slot'): 2, TAG_String('id'): minecraft:birch_sign, TAG_Byte('Count'): 1}
+    myinv = ['']*32
     for item in items:
-       iid = item['id'].value
-       #print(item)
-       
+      slot  = item['Slot'].value
+      iid   = item['id'].value
+      # Convert to Minetest object
+      iid   = convert_inventory_block(iid[10:])
 
+      count = item['Count'].value
+      myinv[slot] = iid+" "+str(count)
+    
+    inventory = {"main": (32, myinv)}
     return (fields, inventory)
 
 def escape(s):
@@ -113,6 +122,8 @@ te_convert = {"minecraft:birch_sign": convert_sign,
               "minecraft:sign": convert_sign,
               "minecraft:oak_wall_sign": convert_sign,
               "minecraft:birch_wall_sign": convert_sign,
+              "minecraft:chest": convert_chest,
+              "minecraft:ender_chest": convert_chest,
               "minecraft:flower_pot": convert_pot}
 
 # DISABLING CHEST FOR NOW
