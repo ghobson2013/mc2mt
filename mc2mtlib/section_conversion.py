@@ -25,6 +25,7 @@ def convert_section(
     z = ( - int(region_z) << 5) | (31-chunk_z)
     #z += 319 # Gratitude Tower
     z += 34 # DEGEN
+    # testworldout2 no offset
 
     converted_section["pos"] = (x,section_y-4,z) # shift world down 64 blocks (so sea level is around y=0 in minetest)
 
@@ -38,11 +39,11 @@ def convert_section(
     te_pos = 0
     for block in chunk.stream_blocks(0,section_y,True):
 
-        #if ( "lever" in block.id):
+        #if ( "chest" in block.id):
         #  print("BLOCK ID:%s BLOCK:%s PROP:%s "%(block.id,repr(block),block.properties));
           
         # Only handling signs for now.
-        if( "sign" in block.id):
+        if( "sign" in block.id ) | ("chest" in block.id ):
           #print("BLOCK regian X:%d Z:%d Section Y:%d Chunk X:%d Z:%d Count:%d"%(int(region_x),int(region_z),section_y, chunk.x, chunk.z, count));
           #print("BLOCK ID:%s BLOCK:%s PROP:%s "%(block.id,repr(block),block.properties));
           myy = (section_y*16)+(count // 256)
@@ -70,7 +71,7 @@ def convert_section(
           if te_metadata == None:
               print("ERROR: No conversion found for %s"%block.name())
           #else:
-              #print("block meta is %s"%repr(te_metadata))
+          #    print("block meta is %s"%repr(te_metadata))
           tile_cnt += 1
 
         y = count // 256 
