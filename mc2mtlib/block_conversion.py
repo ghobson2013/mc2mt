@@ -83,6 +83,27 @@ def get_from_table(table,block):
 
     return param0,param1,param2
 
+def convert_inventory_block(blockId):
+    # Get conversion from cache
+    if blockId == "air": return "air"
+
+    # Get conversion from mod
+    for priority,mod_name in mods_priority:
+        if not mods_enabled[mod_name]: continue
+        mod_table = mods_available[mod_name]['table']
+        converted = find_in_table(mod_table,blockId)
+
+        if converted:
+          param0,param1,param2 = mod_table[converted]
+          #print("converted: %s to %s "%(blockId,param0))
+          return  param0
+
+    # Unknown block
+    if unknown_as_air: converted = "air"
+    else: converted = f"mc2mt:{blockId}"
+    if report_unknown_blocks: print("ERROR: UnknownBlock in Chest: "+blockId)
+    return converted
+
 def convert_block(block):
     # Get conversion from cache
     if block.id == "air": return ("air",15,0)
