@@ -96,10 +96,12 @@ def convert_inventory_block(blockId):
         if converted:
           param0,param1,param2 = mod_table[converted]
           #print("converted: %s to %s "%(blockId,param0))
+          # Special use case for functions in block conversion table
+          if param0[0] == '@': param0 = "default:apple"
           return  param0
 
     # Unknown block
-    if unknown_as_air: converted = "air"
+    if unknown_as_air: converted = "default:apple"
     else: converted = f"mc2mt:{blockId}"
     if report_unknown_blocks: print("ERROR: UnknownBlock in Chest: "+blockId)
     return converted
