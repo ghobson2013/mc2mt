@@ -22,13 +22,17 @@ def convert_chest(te):
     # Example {TAG_Byte('Slot'): 2, TAG_String('id'): minecraft:birch_sign, TAG_Byte('Count'): 1}
     myinv = ['']*32
     for item in items:
+      print(item)
       slot  = item['Slot'].value
       iid   = item['id'].value
       # Convert to Minetest object
       iid   = convert_inventory_block(iid[10:])
-
       count = item['Count'].value
-      myinv[slot] = iid+" "+str(count)
+
+      try:
+          myinv[slot] = iid+" "+str(count)+" "+str(item['tag']['Damage'].value)
+      except KeyError:
+          myinv[slot] = iid+" "+str(count)
     
     inventory = {"main": (32, myinv)}
     return (fields, inventory)
