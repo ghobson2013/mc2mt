@@ -14,6 +14,7 @@
     "prismarine": ["prismatic_stone:cyan_prismatic_stone",0,0],
     "cartography_table" : ["cartographer:simple_table",0,0],
     "lantern": ["morelights_vintage:lantern_f",15,0],
+    "sea_lantern": ["xocean:sea_lantern",15,0],
     "bubble_coral": ["xocean:bubble",15,0],
     "?stairs" : ["@shape2stair",15,"@stair2facedir"],
     "?slab" : ["@material2slab",15,"@type2facedir"],
