@@ -248,7 +248,6 @@
         "rose_bush":["flowers:rose",15,0],
         "sand":["default:sand",0,0],
         "sandstone":["default:sandstone",0,0],
-        "sea_lantern":["default:obsidian_glass",15,0],
         "sea_pickle":["default:coral_green",0,0],
         "seagrass":["default:coral_green",0,0],
         "?sign":["default:sign_wall_wood",15,"@facing2wallmounted"],
