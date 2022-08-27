@@ -22,7 +22,7 @@ def convert_chest(te):
     # Example {TAG_Byte('Slot'): 2, TAG_String('id'): minecraft:birch_sign, TAG_Byte('Count'): 1}
     myinv = ['']*32
     for item in items:
-      print(item)
+      #print(item)
       slot  = item['Slot'].value
       iid   = item['id'].value
       # Convert to Minetest object
@@ -34,6 +34,8 @@ def convert_chest(te):
       except KeyError:
           myinv[slot] = iid+" "+str(count)
     
+    #inventory = {"main": (0, [MTItemStack()]*32)}
+    # turn off migration
     inventory = {"main": (32, myinv)}
     return (fields, inventory)
 
@@ -128,12 +130,19 @@ te_convert = {"minecraft:birch_sign": convert_sign,
               "minecraft:birch_wall_sign": convert_sign,
               "minecraft:chest": convert_chest,
               "minecraft:ender_chest": convert_chest,
-              "minecraft:flower_pot": convert_pot}
+              "minecraft:trapped_chest": convert_chest,
+              "minecraft:barrel": convert_chest,
+              "minecraft:shulker_box": convert_chest,
+              "minecraft:flower_pot": convert_pot,
+              "minecraft:brown_shulker_box": convert_chest,
+              "minecraft:black_shulker_box": convert_chest,
+              "minecraft:orange_shulker_box": convert_chest,
+              "minecraft:cyan_shulker_box": convert_chest,
+              "minecraft:white_shulker_box": convert_chest,
+              "minecraft:gray_shulker_box": convert_chest,
+              "minecraft:light_blue_shulker_box": convert_chest,
+              "minecraft:green_shulker_box": convert_chest,
+              "minecraft:lime_shulker_box": convert_chest}
 
-# DISABLING CHEST FOR NOW
-#te_convert = {"minecraft:chest": convert_chest,
-#              "minecraft:sign": convert_sign,
-#              "minecraft:oak_wall_sign": convert_sign,
-#              "minecraft:birch_wall_sign": convert_sign,
-#              "minecraft:flower_pot": convert_pot}
+
 

@@ -31,6 +31,8 @@ parser.add_argument('input',
                     help='Minecraft input world folder')
 parser.add_argument('output',
                     help='Output folder for the generated world.')
+parser.add_argument('--count','-c',action='store_true',
+                    help='Only count blocks')
 parser.add_argument('--mod','-m',action='append',
                     help='Load mod from json file')
 parser.add_argument('--disable_all_mods','-d',action='store_true',

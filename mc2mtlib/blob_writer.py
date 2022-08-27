@@ -4,9 +4,6 @@ from .itemstack import *
 from .block_conversion import coord
 
 def write_blob(converted_section):
-    #writeU8 = lambda out,u8: out.write(bytes([u8&0xff]))
-    #writeU16 = lambda out,u16: out.write(bytes([(u16>>8)&0xff,u16&0xff]))
-    #writeU32 = lambda out,u32: out.write(bytes([(u32>>24)&0xff,(u32>>16)&0xff,(u32>>8)&0xff,u32&0xff]))
 
     out = io.BytesIO()
     writeU8(out, 27)      # Version 27
@@ -38,7 +35,7 @@ def write_blob(converted_section):
           #print("--> %s: %s"%(name,str(val)));
           writeString(node_metadata, name)
           writeLongString(node_metadata, str(val))
-        #print("serializing inventory %s"%data[1]);
+        #print("serializing inventory %s "%data[1]);
         serialize_inv(node_metadata, data[1])
     out.write(zlib.compress(node_metadata.getvalue()))
     node_metadata.close()

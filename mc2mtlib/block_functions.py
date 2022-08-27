@@ -1,3 +1,5 @@
+blockCnt = dict()
+
 materials = {
     "acacia" : "acacia_wood",
     "andesite" : "stone",

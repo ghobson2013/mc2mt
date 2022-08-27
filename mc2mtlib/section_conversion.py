@@ -1,4 +1,5 @@
 from . import block_conversion
+from . import block_functions
 from .tile_entities import te_convert
 
 def convert_section(
@@ -6,7 +7,8 @@ def convert_section(
         chunk_x,
         chunk_z,
         section_y,
-        chunk
+        chunk,
+        blockcount
 ):
     converted_itemstring = {}
     converted_section = {
@@ -42,8 +44,7 @@ def convert_section(
         #if ( "chest" in block.id):
         #  print("BLOCK ID:%s BLOCK:%s PROP:%s "%(block.id,repr(block),block.properties));
           
-        # Only handling signs for now.
-        if( "sign" in block.id ) | ("chest" in block.id ):
+        if( "sign" in block.id ) | ("chest" in block.id ) | ("shulker_box" in block.id)  | ("barrel" in block.id):
           #print("BLOCK regian X:%d Z:%d Section Y:%d Chunk X:%d Z:%d Count:%d"%(int(region_x),int(region_z),section_y, chunk.x, chunk.z, count));
           #print("BLOCK ID:%s BLOCK:%s PROP:%s "%(block.id,repr(block),block.properties));
           myy = (section_y*16)+(count // 256)
@@ -90,6 +91,12 @@ def convert_section(
         converted_section["param1"][block_conversion.coord(z,y,x)] = param1
         converted_section["param2"][block_conversion.coord(z,y,x)] = param2
         
+        if blockcount:
+            if itemstring not in block_functions.blockCnt.keys():
+                block_functions.blockCnt[itemstring] = 1
+            else:
+                block_functions.blockCnt[itemstring] += 1
+                
         if te_metadata != None:
           #print("BLOCK MT COORDINATES X:%d Y:%d Z:%d "%(x, y, z));
           converted_section["meta"][te_pos] = te_metadata

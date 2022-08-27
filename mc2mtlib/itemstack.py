@@ -1,5 +1,19 @@
+class MCItemStack:
+    def __init__(self):
+        pass
 
+class MTItemStack:
+    def __init__(self):
+        pass
 
+    def fromMCItemStack(self, mcstack):
+        pass
+
+    def empty(self):
+        return True
+
+    def serialize(self, os):
+        pass
 
 def serialize_inv_list(os, inv_list):
     for item in inv_list[1]:

@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import os
 import time
-
 import anvil
 
 from mc2mtlib import *
@@ -10,6 +9,8 @@ from mc2mtlib import *
 if __name__ == '__main__':
 
     # Args
+    blockcount = False
+
     args = parse_args()
     if args.disable_all_mods:
         for mod in block_conversion.mods_enabled:
@@ -24,6 +25,8 @@ if __name__ == '__main__':
             block_conversion.mods_enabled[mod] = True
     if args.unknown_as_air:
         block_conversion.unknown_as_air = True
+    if args.count:
+        blockcount = True
     if args.quiet:
         block_conversion.report_unknown_blocks = False
     if args.mod:
@@ -52,8 +55,8 @@ if __name__ == '__main__':
                 try:
                     chunk = region.get_chunk(chunk_x,chunk_z)
                 except Exception as e:
-                    if type(e) is not anvil.errors.ChunkNotFound:
-                        print(f"ChunkError~{[chunk_x,chunk_z]}~{e}")
+                    #if type(e) is not anvil.errors.ChunkNotFound:
+                    #    print(f"ChunkError~{[chunk_x,chunk_z]}~{e}")
                     continue
                 for section_y in range(0,16):
                     converted = section_conversion.convert_section(
@@ -61,10 +64,11 @@ if __name__ == '__main__':
                         chunk_x,
                         chunk_z,
                         section_y,
-                        chunk
+                        chunk,
+                        blockcount
                     )
                     if not converted: continue
-                    world.insert(converted)
+                    if not blockcount: world.insert(converted)
             print(f"Map Blocks saved: {world.saved_map_block}",end="\r")
     # End
     world.save()
@@ -73,3 +77,12 @@ if __name__ == '__main__':
     else:
         print("No blocks have been saved. Map version is not supported?")
     print(f"Conversion ended in {(time.time()-start_time)/60:.02f} m")
+
+    if blockcount:
+      print("Exporting block counts....")
+      with open('blockcounts.csv', 'w') as csvfile:
+        csvfile.write("blockName,blockCount\n")
+        for key in block_functions.blockCnt.keys():
+          csvfile.write("%s, %s\n" % (key, block_functions.blockCnt[key]))
+      print("Export completed...")
+
