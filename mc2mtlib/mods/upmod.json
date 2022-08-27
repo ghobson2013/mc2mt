@@ -1,0 +1,26 @@
+{
+    "name" : "upmod",
+    "author" : "mightpossibly",
+    "description": "stained glass pane",
+    "download" : "",
+    "enabled" : true,
+    "priority" : 10,
+    "table" : {
+    	"white_stained_glass_pane": ["xpanes:upmod_pane_white_flat",0,"@cardinal2facedir"],
+    	"orange_stained_glass_pane": ["xpanes:upmod_pane_orange_flat",0,"@cardinal2facedir"],
+    	"magenta_stained_glass_pane": ["xpanes:upmod_pane_magenta_flat",0,"@cardinal2facedir"],
+    	"light_blue_stained_glass_pane": ["xpanes:upmod_pane_light_blue_flat",0,"@cardinal2facedir"],
+    	"yellow_stained_glass_pane": ["xpanes:upmod_pane_yellow",0,"@cardinal2facedir"],
+    	"lime_stained_glass_pane": ["xpanes:upmod_pane_green_flat",0,"@cardinal2facedir"],
+    	"pink_stained_glass_pane": ["xpanes:upmod_pane_violet_flat",0,"@cardinal2facedir"],
+    	"gray_stained_glass_pane": ["xpanes:upmod_pane_white_flat",0,"@cardinal2facedir"],
+    	"light_gray_stained_glass_pane": ["xpanes:upmod_pane_white_flat",0,"@cardinal2facedir"],
+    	"cyan_stained_glass_pane": ["xpanes:upmod_pane_cyan_flat",0,"@cardinal2facedir"],
+    	"purple_stained_glass_pane": ["xpanes:upmod_pane_violet_flat",0,"@cardinal2facedir"],
+    	"blue_stained_glass_pane": ["xpanes:upmod_pane_blue_flat",0,"@cardinal2facedir"],
+    	"brown_stained_glass_pane": ["xpanes:upmod_pane_white_flat",0,"@cardinal2facedir"],
+    	"green_stained_glass_pane": ["xpanes:upmod_pane_green_flat",0,"@cardinal2facedir"],
+    	"red_stained_glass_pane": ["xpanes:upmod_pane_red_flat",0,"@cardinal2facedir"],
+    	"black_stained_glass_pane": ["xpanes:upmod_pane_blue_flat",0,"@cardinal2facedir"]
+    }
+}
