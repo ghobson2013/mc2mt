@@ -176,7 +176,7 @@
         "iron_bars":["xpanes:bar",15,"@cardinal2facedir"],
         "iron_block":["default:steelblock",0,0],
         "iron_ore":["default:stone_with_iron",0,0],
-	"iron_nugget": [["default:stone_with_iron",0,0],
+	"iron_nugget": ["default:stone_with_iron",0,0],
         "iron_trapdoor":["doors:trapdoor_steel",0,"@facing2facedir"],
         "jungle_fence":["default:fence_junglewood",0,0],
         "jungle_fence_gate":["doors:gate_junglewood_closed",0,2],
