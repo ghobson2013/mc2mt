@@ -304,6 +304,7 @@
 	"sugar_cane":["default:papyrus",15,0],
         "sunflower":["flowers:rose",15,0],
         "sweet_berry_bush" : ["default:blueberry_bush_leaves_with_berries",15,0],
+	"sweet_berries": ["default:blueberries",0,0],
         "tall_grass":["default:junglegrass",15,0],
         "tall_seagrass":["default:coral_pink",0,0],
         "tin_ore":["default:stone_with_tin",0,0],

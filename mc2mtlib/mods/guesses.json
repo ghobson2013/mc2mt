@@ -18,6 +18,8 @@
     "cartography_table" : ["cartographer:simple_table",15,0],
     "lantern": ["morelights_vintage:lantern_f",15,0],
     "loom": ["inventorybags:loom",15,0],
+    "soul_fire": ["fire:permanent_flame",15,0],
+    "soul_lantern": ["morelights_vintage:lantern_f",15,0],
     "sea_lantern": ["xocean:sea_lantern",15,0],
     "bubble_coral": ["xocean:bubble",15,0],
     "flower_pot": ["flowerpot:empty",0,0],
