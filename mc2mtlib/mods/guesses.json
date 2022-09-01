@@ -20,6 +20,7 @@
     "loom": ["inventorybags:loom",15,0],
     "sea_lantern": ["xocean:sea_lantern",15,0],
     "bubble_coral": ["xocean:bubble",15,0],
+    "flower_pot": ["flowerpot:empty",0,0],
     "?stairs" : ["@shape2stair",15,"@stair2facedir"],
     "?slab" : ["@material2slab",15,"@type2facedir"],
     "?block" : ["@id2material",0,0],

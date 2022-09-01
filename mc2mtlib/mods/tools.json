@@ -19,6 +19,7 @@
 	"crossbow": ["bows:bow_steel",0,0],
 	"shield": ["shields:shield_steel",0,0],
 	"saddle": ["mobs:saddle",15,0],
+	"honey_bottle": ["mobs:honey",0,0],
 	"iron_horse_armor": ["mobs:saddle",15,0],
 	"wheat_seeds": ["farming:sunflower_seeds",0,0],
 	"minecart": ["minecart:cart",0,0],

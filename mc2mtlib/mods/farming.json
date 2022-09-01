@@ -15,6 +15,7 @@
     	"melon": ["farming:melon_8",0,0],
     	"hay_block": ["farming:hemp_block",0,0],
     	"carrot": ["farming:carrot",0,0],
+	"golden carrot": ["farming:carrot_gold",0,0],
     	"potato": ["farming:potato",0,0],
     	"beetroot": ["farming:beetroot",0,0],
 	"beetroot_seeds":  ["farming:beetroot",0,0],
