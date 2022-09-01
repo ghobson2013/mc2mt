@@ -12,6 +12,7 @@
     "ender_chest" : ["void_chest:void_chest",0,"@facing2facedir"],
     "chain": ["morelights:chain_l",0,0],
     "prismarine": ["prismatic_stone:cyan_prismatic_stone",0,0],
+    "dark_prismarine": ["prismatic_stone:cyan_prismatic_stone",0,0],
     "prismarine_shard": ["prismatic_stone:cyan_prismatic_stone",0,0],
     "prismarine_crystals": ["prismatic_stone:cyan_prismatic_stone",0,0],
     "cartography_table" : ["cartographer:simple_table",15,0],
@@ -27,6 +28,7 @@
     "?shulker_box" : ["default:chest",15,"@facing2facedir"],
     "?wall" : ["walls:cobble",15,0],
     "?wood" : ["default:tree",0,0],
-    "?candle" : ["default:torch",0,1]
+    "?candle" : ["default:torch",0,1],
+    "?boat": ["boats:boat",15,0]
   }
 }

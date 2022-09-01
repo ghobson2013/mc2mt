@@ -13,6 +13,7 @@
 	"tropical_fish": ["ethereal:fish_pufferfish",0,0],
 	"golden_apple": ["ethereal:golden_apple",0,0],
         "fishing_rod": ["ethereal:fishing_rod",0,0],
-        "cooked_beef": ["ethereal:teriyaki_beef",0,0]
+        "cooked_beef": ["ethereal:teriyaki_beef",0,0],
+	"beef":  ["ethereal:teriyaki_beef",0,0],
     }
 }
