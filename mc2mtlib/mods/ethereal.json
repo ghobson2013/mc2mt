@@ -1,0 +1,18 @@
+{
+    "name" : "ethereal",
+    "author" : "tenplus1",
+    "description": "Ethereal",
+    "download" : "https://notabug.org/tenplus1/ethereal",
+    "enabled" : true,
+    "priority" : 10,
+    "table" : {
+	"cooked_cod": ["ethereal:fish_cooked",0,0],
+	"salmon": ["ethereal:fish_salmon",0,0],
+	"cod": ["ethereal:fish_trout",0,0],
+	"pufferfish": ["ethereal:fish_pufferfish",0,0],
+	"tropical_fish": ["ethereal:fish_pufferfish",0,0],
+	"golden_apple": ["ethereal:golden_apple",0,0],
+        "fishing_rod": ["ethereal:fishing_rod",0,0],
+        "cooked_beef": ["ethereal:teriyaki_beef",0,0]
+    }
+}
