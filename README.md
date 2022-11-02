@@ -8,8 +8,18 @@ This is a fork of Listia's excelent work.
 - replaced grass with tall grass instead of grass_path
 - replaced kelp with water ( as it made a mess under water )
 - added ability to migrate sign text
+- added ability to migrate chest content
 - adjusted m2mt.py to work with python3 ( on ubuntu 20 )
 - added missing blocks for MC 1.16.5
+
+## Known issues
+
+- button and lever rotation isn't always correct, just place them again.
+- floor lever/buttons don't exist in minetest.
+- furnaces don;t show a UI, break them and place them back to fix it
+- some glass panes are not rotated properly, just place them back.
+- Water elevators have no bubbles, I added televator mod to replace water elevator
+- if you hear constant sound ticking in a loop it's likely a block of sand on a door nearby find it and replace it.
 
 ## Dependencies
 
@@ -33,6 +43,7 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   -m MOD                Load mod from json file
+  -c                    Count blocks only
   -d                    Disable all mods
   -e                    Enable all mods
   -u                    Unknown blocks will be converted to air
